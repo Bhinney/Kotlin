@@ -3,8 +3,8 @@ package 알고리즘
 import kotlin.system.measureNanoTime
 
 fun main() {
-    var a = 0
-    var b= 0
+    var a: Int
+    var b: Int
     val measuredTime1 = measureNanoTime {
         a = 짝수의_합().solution1(10)
     }
