@@ -22,6 +22,12 @@ kotlin {
     jvmToolchain(8)
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
 application {
     mainClass.set("MainKt")
 }
