@@ -3,9 +3,9 @@ package 이론
 fun main() {
 //    zipExample()
 //    joinToStringExample()
-//    reduceFoldExample()
+    reduceFoldExample()
 //    anyNoneExample()
-    numExample()
+//    numExample()
 }
 
 val koreanDays = arrayListOf("월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일")
@@ -24,19 +24,32 @@ fun joinToStringExample() {
 
 //reduce(), fold() : 컬렉션 내의 자료를 다 합쳐줌
 fun reduceFoldExample() {
+
+    println("< reduce() >")
     koreanDays.reduce { now, next ->
         println("오늘은 $now, 내일은 $next")
         next
     }
+    numbers.reduce{ next, total ->
+        println("next $next total $total")
+        next + total }
+
+    println()
+    println("< fold() >")
     englishDays.fold("") { now, next ->
         println("Today is $now, tomorrow is $next")
         next
     }
-
-    numbers.reduce{ next, total ->
-        println("next $next total $total")
-        next + total }
     numbers.fold(numbers.first()) {next, total ->
+        println("next $next total $total")
+        next + total}
+
+    println()
+    println("< foldRight() >")
+    koreanDays.foldRight("") { now, next ->
+        println("Today is $now, tomorrow is $next")
+        now}
+    numbers.foldRight(numbers.first()) {next, total ->
         println("next $next total $total")
         next + total}
 }
@@ -44,10 +57,13 @@ fun reduceFoldExample() {
 // any(), none() : 컬렉션에서 자료의 존재 여부를 반환
 fun anyNoneExample() {
     // 자료가 있으면 true 없으면 false
+    println("< any() >")
     println(koreanDays.any())
     println(englishDays.any { day -> day.startsWith("N")})
+    println()
 
     // 자료가 있으면 false 없으면 true
+    println("< none() >")
     println(koreanDays.none())
     println(englishDays.none { day -> day.startsWith("N") })
 }
