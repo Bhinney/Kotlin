@@ -1,4 +1,4 @@
-package 알고리즘
+package 알고리즘.lv0
 
 fun main() {
     println(양꼬치().solution(10, 3))

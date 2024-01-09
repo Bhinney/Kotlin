@@ -1,4 +1,4 @@
-package 알고리즘;
+package 알고리즘.lv0;
 
 import java.util.Arrays;
 

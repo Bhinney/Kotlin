@@ -1,4 +1,4 @@
-package 알고리즘
+package 알고리즘.연산
 
 import kotlin.system.measureNanoTime
 

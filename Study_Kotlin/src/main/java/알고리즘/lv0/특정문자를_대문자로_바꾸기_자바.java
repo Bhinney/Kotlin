@@ -1,4 +1,4 @@
-package 알고리즘;
+package 알고리즘.lv0;
 
 public class 특정문자를_대문자로_바꾸기_자바 {
 	public static void main(String[] args) {

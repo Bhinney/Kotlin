@@ -1,4 +1,4 @@
-package 알고리즘
+package 알고리즘.lv0
 
 fun main() {
     println(특정문자를_대문자로_바꾸기().solution("programmers", "p"))

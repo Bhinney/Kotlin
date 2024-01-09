@@ -1,4 +1,4 @@
-package 알고리즘
+package 알고리즘.lv0
 
 fun main(){
     println(중복된_숫자개수().solution(intArrayOf(1, 1, 2, 3, 4, 5), 1))

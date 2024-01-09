@@ -29,7 +29,7 @@ public class CombinationAndNumStream {
 		});
 		IntStream.of(numbers).reduce((next, total) -> {
 			System.out.println("next " + next + " total " + total);
-			return total;
+			return total + next;
 		});
 
 		System.out.println("\n< any() && none()? >");

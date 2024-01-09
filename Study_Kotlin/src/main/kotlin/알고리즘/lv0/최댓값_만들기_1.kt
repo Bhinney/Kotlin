@@ -1,4 +1,4 @@
-package 알고리즘
+package 알고리즘.lv0
 
 fun main() {
     println(최댓값_만들기_1().solution(intArrayOf(1,2, 3, 4, 5)))
