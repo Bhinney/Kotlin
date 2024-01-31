@@ -12,10 +12,10 @@ class Board(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var boardId : Long,
 
-    @Column(nullable = false)
+    @Column(length = 100, nullable = false)
     var title : String,
 
-    @Column(nullable = false)
+    @Column(columnDefinition = "TEXT", nullable = false)
     var content : String
-){
+) : BaseTime() {
 }
