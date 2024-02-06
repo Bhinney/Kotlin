@@ -1,10 +1,6 @@
 package kotlin_project.board.entity
 
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
 class Member(
@@ -20,6 +16,13 @@ class Member(
     var email : String,
 
     @Column(nullable = false)
-    var password : String
+    var password : String,
+
+    @Enumerated(EnumType.STRING)
+    var role: Role
 ) {
+}
+
+enum class Role{
+    USER, ADMIN
 }
